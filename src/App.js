@@ -21,11 +21,11 @@ const appRouter = createBrowserRouter([{
         element:<MainContainer/>
       },
       {
-        path:"youtubehos/watch",
+        path:"/watch",
         element:<Watch/>
       },
       {
-        path:"youtubehos/result",
+        path:"/result",
         element:<Results/>
       }
     ]
