@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+   <div className='p-2 m-2   '>
+            <img alt="thumbnail" src={videos?.snippet?.thumbnails?.medium?.url}/>
+             <h2>{videos?.snippet?.title}</h2>
+                    </div>
+
+                     <Link  to ={"/result?search_query="+searchKey}>
+
+                     const searchResult =()=>{
+    console.log("this redirect page");
+    if(searchKey.length!=0)
+      redirect("/watch")
+   // return redirect("/result?search_query="+searchKey);
+   }
+
+    useEffect(()=>{
+
+       resultData()
+        
+     },[])
+
+     const resultData = async ()=>{
+              
+           const data =await fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=java&type=video&key=AIzaSyC3ITiosQmZXfIf4kCPUamAZU9vbsqRnfI");
+           const json =await data.json();
+           console.log("serach result")
+           console.log(json.items)
+           setSearchResult(json.items)
+        
+     }
