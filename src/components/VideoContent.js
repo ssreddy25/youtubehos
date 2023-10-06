@@ -30,7 +30,7 @@ const VideoContent = () => {
     videos.map((videos)=>(
               
                     <div > 
-                    <Link to={"/watch?v="+videos.id} >  <VideosCard key={videos?.id} info={videos}/> </Link> 
+                    <Link to={"youtubehosn/watch?v="+videos.id} >  <VideosCard key={videos?.id} info={videos}/> </Link> 
                     </div>
         ))
      

@@ -13,19 +13,19 @@ import Results from './components/Result';
 
 const appRouter = createBrowserRouter([{
    
-    path:'/',
+    path:'/youtubehos',
     element:<Body/>,
     children :[
       {
-        path:"/",
+        path:"/youtubehos",
         element:<MainContainer/>
       },
       {
-        path:"/watch",
+        path:"youtubehos/watch",
         element:<Watch/>
       },
       {
-        path:"/result",
+        path:"youtubehos/result",
         element:<Results/>
       }
     ]
